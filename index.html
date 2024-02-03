@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="lemon_milk/fivecon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+      </style>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>REDEFINIR DE QRCODE</title>
 </head>
@@ -12,9 +15,9 @@
        <div class="di">
             <h1>Restaurar QRCODE do AppControler</h1>
             <form id="for" method="get">
-                <label for="nome">Informe o sue DE:</label>
+                <label for="nome">Informe o seu DE ou TR:</label>
                 <input type="text" name="DE" id="DE" maxlength="9" placeholder="coloque o seu DE aqui">
-                <button class="btn" onclick="receber_dado()">ENVIAR</button>
+                <button type="button" class="btn" onclick="receber_dado()">ENVIAR</button>
             </form> 
        </div>
 
@@ -23,7 +26,7 @@
         form.addEventListener('submit', e => {
         e.preventDefault()
         console.log('Deu certo')
-    })
+        })
         function receber_dado(){
             
             const de = document.getElementById('DE').value;
@@ -41,11 +44,14 @@
                         icon: data.icon
                     });
                 })
-                .catch(error => alert('Erro ao chamar API:', error));
+                .catch(error => swal({
+                     text: 'API não iniciada',
+                     icon:"warning",
+                     title: "Bot não iniciado"
+                }));
         }
 
        </script>
-
 </body>
 
 </html>

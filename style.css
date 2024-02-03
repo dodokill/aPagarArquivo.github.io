@@ -1,16 +1,12 @@
-@font-face {
-    font-family: "Fonte";
-    src: url(lemon_milk/LEMONMILK-BoldItalic.otf);
-}
-
 :root {
-    --azulfundo: #245677;
+    --fontprincipal:'Poppins', sans-serif;
+    --azulfundo: #08265e;
     --quadrado: #fff;
     --placehoder: #0000;
 }
 
 * {
-    font-family: 'Fonte';
+    font-family: var(--fontprincipal);
     margin: 0;
     padding: 0;
 }
@@ -64,13 +60,14 @@ label {
 }
 
 .btn {
-    background-color: rgb(132, 247, 247);
+    background-color: #cf2e2e;
     font-size: 1.5vw; /* Alterando o tamanho da fonte para ser relativo à largura da tela */
     border: none;
     border-radius: 5px;
     padding: 1vw 2vw; /* Alterando o preenchimento para ser relativo à largura da tela */
     cursor: pointer;
     transition: .2s all;
+    color: aliceblue;
 }
 
 .btn:hover {
